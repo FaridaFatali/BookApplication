@@ -5,12 +5,9 @@ package BookApp;
  * @author Farida Fatali
  */
 public class Author {
-    String name;
-    {
-        name = new String("Khaled Hosseini");
-        System.out.println("The author name: " + name);
-    }
-
+    private String name;
+    
+    
     public Author() {
     }
     
@@ -27,5 +24,7 @@ public class Author {
         this.name = name;
     }
     
-    
+    public void authorInfo(){
+        System.out.println("Author name: " + name);
+    }
 }

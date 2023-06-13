@@ -6,55 +6,49 @@ package BookApp;
  * @author Farida Fatali
  */
 
-// Lessons of - Classes, Objects, Constructors, this, get/set, Initializer Blocks
+// Access modifiers, getter/setter
 
 public class ReaderTest {
     public static void main(String[] args) {
         
-//        Reader reader1 = new Reader("Farida", 32, "woman");
-//        Book book1 = new Book();
-//        book1.title = "Origin";        
-//        book1.page = 461;
-//        book1.type = "Crime";
-//        book1.isHardCover = true;
-//        book1.currentPage = 266;
-//        Author author1 = new Author("Dan Brown");
-//        book1.author = author1;
-//        System.out.println("----------------------");
-//        
-//        Reader reader2 = new Reader("Ali", 28, "man");
-//        Book book2 = new Book();
-//        book2.title = "A Thousand Splendid Suns";        
-//        book2.page = 384;
-//        book2.type = "Novel";
-//        book2.isHardCover = false;
-//        book2.currentPage = 150;
-//        Author author2 = new Author("Khaled Hosseini");
-//        book2.author = author2;
-//        System.out.println("----------------------");
-//       
-//        reader1.printInfo();
-//        System.out.println();
-//        reader1.read(book1);
-//        System.out.println();
-//        System.out.println("----------------------");
-//        System.out.println();
-//        reader2.printInfo();
-//        System.out.println();
-//        reader2.read(book2);
-//        System.out.println();
+        Reader reader1 = new Reader();
+        reader1.setName("Farida");
+        reader1.setAge(32);
+        reader1.setGender("Female");
         
-        System.out.println("Initializer blocks:");
-        System.out.println();
-        System.out.println("Book info:");
-        new Book();
-        System.out.println();
-        System.out.println("Author info");
-        new Author();
-        System.out.println();
-        System.out.println("Reader info");
-        new Reader();
-        System.out.println();
+        Book book1 = new Book();
+        book1.setTitle("Origin");        
+        book1.setPage(461);
+        book1.setType("Crime");
+        book1.setHardCover(true);
+        book1.setCurrentPage(266);
+        Author author1 = new Author();
+        author1.setName("Dan Brown");
+        book1.setAuthor(author1);
+        reader1.readerInfo();
+        book1.bookInfo();
+        author1.authorInfo();
+        System.out.println("----------------------");
+        
+        Reader reader2 = new Reader();
+        reader2.setName("Ali");
+        reader2.setAge(25);
+        reader2.setGender("Male");
+        
+        Book book2 = new Book();
+        book2.setTitle("A Thousand Splendid Suns");        
+        book2.setPage(384);
+        book2.setType("Novel");
+        book2.setHardCover(false);
+        book2.setCurrentPage(150);
+        Author author2 = new Author();
+        author2.setName("Khaled Hosseini");
+        book2.setAuthor(author2);
+        reader2.readerInfo();
+        book2.bookInfo();
+        author2.authorInfo();
+
+        
     }
     
 }

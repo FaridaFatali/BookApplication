@@ -4,27 +4,14 @@ package BookApp;
  *
  * @author Farida Fatali
  */
+
+
 public class Reader {
-    String name;
-    {
-        name = new String("Farida");
-        System.out.println("Reader's name: " + name);
-    }
-    
-    int age;
-    {
-        age = 32;
-        System.out.println("Age of the reader: " + age);
-    }
-    
-    String gender;
-    {
-        gender = new String("female");
-        System.out.println("The gender of the reader: " + gender);
-    }
-    
-    Book book;    
-    Author author;
+    private String name;
+    private int age;
+    private String gender;
+    private Book book;
+    private Author author;
 
     
     
@@ -42,26 +29,6 @@ public class Reader {
         this(name, age, gender);
         this.book = book;
         this.author = author;
-    }
-        
-    
-    
-    public void read(Book book){
-        System.out.println("Reading book: " + "'" + book.title + "'");
-        System.out.println("Author: " + book.author.name);
-        System.out.println("Page: " + book.page);
-        System.out.println("Genre: " + book.type);
-        System.out.println("Hard Cover: " + book.isHardCover);
-        System.out.println("Current page: " + book.currentPage);
-        
-    }
-    
-    
-    public void printInfo(){
-        System.out.println("Reader name: " + this.name);
-        System.out.println("Reader age: " + this.age);
-        System.out.println("Reader gender: " + this.gender);
-        
     }
     
     
@@ -88,6 +55,26 @@ public class Reader {
     public void setGender(String gender) {
         this.gender = gender;
     }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
     
+    public void readerInfo(){
+        System.out.println("Reader's name: " + name + ".\nAge: " + age + ".\nGender: " + gender);
+        
+    }
     
 }

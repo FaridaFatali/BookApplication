@@ -5,39 +5,14 @@ package BookApp;
  * @author Farida Fatali
  */
 public class Book {
-    Author author;
+    private Author author;
+    private String title;
+    private int page;
+    private String type;
+    private boolean isHardCover;
+    private int currentPage;
     
-    String title;
-    {
-        title = new String("A Thousand Splendid Suns");
-        System.out.println("The book tytle: " + title);
-    }
     
-    int page;
-    {
-        page = 384;
-        System.out.println("Pages: " + page);
-    }
-    
-    String type;
-    {
-        type = new String("Novel");
-        System.out.println("The book type: " + type);
-    }
-    
-    boolean isHardCover;
-    {
-        isHardCover = false;
-        System.out.println("Is it Hard Cover? " + isHardCover);
-    }
-    
-    int currentPage;
-    {
-        currentPage = 150;
-        System.out.println("Current page: " + currentPage);
-    }
-    
-
     public Book() {
     }
 
@@ -89,13 +64,14 @@ public class Book {
         this.type = type;
     }
 
-    public boolean isIsHardCover() {
+    public boolean isHardCover() {
         return isHardCover;
     }
 
-    public void setIsHardCover(boolean isHardCover) {
-        this.isHardCover = isHardCover;
+    public void setHardCover(boolean hardCover) {
+        this.isHardCover = hardCover;
     }
+    
 
     public int getCurrentPage() {
         return currentPage;
@@ -105,5 +81,16 @@ public class Book {
         this.currentPage = currentPage;
     }
     
+    
+    public void bookInfo(){
+    System.out.println("Book title: " + title + ".\nPage count: " + page + ".\nBook type: " + type + ".\nCurrent page: " + currentPage);
+    
+    if (isHardCover()) {
+        System.out.println("Cover: Hard Cover");
+    } else {
+        System.out.println("Cover: Soft Cover");
+    }
+        }
+
     
 }
